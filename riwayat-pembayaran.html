@@ -1,0 +1,624 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="qYEHTAvG6XLTEetBIUrVZI2YkOHNrMXu1R6G2L4O">
+
+    
+    
+    
+    <title>
+                Riwayat Pembayaran            </title>
+
+    
+    
+    
+            <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="vendor/overlayScrollbars/css/OverlayScrollbars.min.css">
+
+        
+        
+        <link rel="stylesheet" href="vendor/adminlte/dist/css/adminlte.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    
+    
+                        <!-- Livewire Styles -->
+<style >
+    [wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid] {
+        display: none;
+    }
+
+    [wire\:offline] {
+        display: none;
+    }
+
+    [wire\:dirty]:not(textarea):not(input):not(select) {
+        display: none;
+    }
+
+    input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
+        animation-duration: 50000s;
+        animation-name: livewireautofill;
+    }
+
+    @keyframes livewireautofill { from {} }
+</style>
+            
+    
+                <link rel="stylesheet" href="css/paginator.css">
+
+    
+        
+            <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
+        
+                <script src="vendor/adminlte/dist/js/adminlte.min.js"></script>
+    
+</head>
+
+<body class="sidebar-mini" >
+
+    
+        <div class="wrapper">
+
+        
+                    <nav class="main-header navbar
+    navbar-expand
+    navbar-white navbar-light">
+
+    
+    <ul class="navbar-nav">
+        
+        <li class="nav-item">
+    <a class="nav-link" data-widget="pushmenu" href="#"
+                        >
+        <i class="fas fa-bars"></i>
+        <span class="sr-only">Toggle navigation</span>
+    </a>
+</li>
+        
+        
+        
+            </ul>
+
+    
+    <ul class="navbar-nav ml-auto">
+        
+        
+        
+        <li class="nav-item">
+    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+        <i class="fas fa-expand-arrows-alt"></i>
+    </a>
+</li>
+
+
+        
+                                    <li class="nav-item dropdown user-menu">
+
+    
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                    <img src="images/profile.png"
+                 class="user-image img-circle elevation-2"
+                 alt="adinaelah">
+                <span  class="d-none d-md-inline" >
+            Selamat datang, adinaelah
+        </span>
+    </a>
+
+    
+    <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+
+        
+                    <li class="user-header bg-dark
+                ">
+                                    <img src="images/profile.png"
+                         class="img-circle elevation-2"
+                         alt="adinaelah">
+                                <p class="">
+                    adinaelah
+                                            <small>Anda adalah Administrator</small>
+                                    </p>
+            </li>
+        
+        
+        
+        
+        
+        
+        <li class="user-footer">
+                        <a class="btn btn-default btn-flat float-right  btn-block "
+               href="login.html" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <i class="fa fa-fw fa-power-off"></i>
+                Log Out
+            </a>
+            <form id="logout-form" action="logout" method="POST" style="display: none;">
+                                <input type="hidden" name="_token" value="qYEHTAvG6XLTEetBIUrVZI2YkOHNrMXu1R6G2L4O">
+            </form>
+        </li>
+
+    </ul>
+
+</li>
+                    
+        
+            </ul>
+
+</nav>
+        
+        
+                    <aside class="main-sidebar sidebar-dark-navy elevation-4">
+
+    
+            <a href="home"
+            class="brand-link "
+    >
+
+    
+    <img src="vendor/adminlte/dist/img/pt_uas.jpeg"
+         alt="Administrator"
+         class="brand-image img-circle elevation-3"
+         style="opacity:.8">
+
+    
+    <span class="brand-text font-weight-light ">
+        <b>Early Warning System</b>
+    </span>
+
+</a>
+    
+    
+    <div class="sidebar">
+        <nav class="pt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column "
+                data-widget="treeview" role="menu"
+                                >
+                
+                <li  class="nav-item">
+
+    <a class="nav-link  "
+       href="home.html"        >
+
+        <i class="fas fa-home "></i>
+
+        <p>
+            Home
+
+                    </p>
+
+    </a>
+
+</li>
+
+<li  class="nav-item has-treeview ">
+
+    
+    <a class="nav-link  "
+       href="" >
+
+        <i class="fas fa-info "></i>
+
+        <p>
+            Info Nasabah
+            <i class="fas fa-angle-left right"></i>
+
+                    </p>
+
+    </a>
+
+    
+    <ul class="nav nav-treeview">
+        <li  class="nav-item">
+
+    <a class="nav-link  "
+       href="daftar-nasabah.html"        >
+
+        <i class="fas fa-user-friends "></i>
+
+        <p>
+            Daftar Nasabah
+
+                    </p>
+
+    </a>
+
+</li>
+
+<li  class="nav-item">
+
+    <a class="nav-link  "
+       href="klasifikasi-nasabah.html"        >
+
+        <i class="fas fa-people-arrows "></i>
+
+        <p>
+            Klasifikasi Nasabah
+
+                    </p>
+
+    </a>
+
+</li>
+
+    </ul>
+
+</li>
+
+<li  class="nav-item">
+
+    <a class="nav-link active "
+       href="riwayat-pembayaran.html"        >
+
+        <i class="far fa-money-bill-alt "></i>
+
+        <p>
+            Info Riwayat Pembayaran
+
+                    </p>
+
+    </a>
+
+</li>
+
+<li  class="nav-item has-treeview ">
+
+    
+    <a class="nav-link  "
+       href="" >
+
+        <i class="fas fa-exclamation-circle "></i>
+
+        <p>
+            Warning System
+            <i class="fas fa-angle-left right"></i>
+
+                    </p>
+
+    </a>
+
+    
+    <ul class="nav nav-treeview">
+        <li  class="nav-item">
+
+    <a class="nav-link  "
+       href="warning-system.html"        >
+
+        <i class="fas fa-exclamation "></i>
+
+        <p>
+            Early Warning
+
+                    </p>
+
+    </a>
+
+</li>
+
+<li  class="nav-item">
+
+    <a class="nav-link  "
+       href="statistic.html"        >
+
+        <i class="fas fa-calculator "></i>
+
+        <p>
+            Statistic
+
+                    </p>
+
+    </a>
+
+</li>
+
+    </ul>
+
+</li>
+
+            </ul>
+        </nav>
+    </div>
+
+</aside>
+        
+        
+        <div class="content-wrapper ">
+
+            
+                            <div class="content-header">
+                    <div class="container-fluid">
+                            <h1>Riwayat Pembayaran</h1>
+                    </div>
+                </div>
+            
+            
+            <div class="content">
+                <div class="container-fluid">
+                        <div wire:id="12UxflW2grDVsGj69gNa" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;12UxflW2grDVsGj69gNa&quot;,&quot;name&quot;:&quot;riwayat-pembayaran&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;riwayat-pembayaran&quot;,&quot;method&quot;:&quot;GET&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[&quot;next&quot;,&quot;prev&quot;,&quot;getPage&quot;]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;b277e642&quot;,&quot;data&quot;:{&quot;data&quot;:[{&quot;id&quot;:3,&quot;customer_identifier&quot;:&quot;B12345&quot;,&quot;account_identifier&quot;:&quot;201020455310&quot;,&quot;position_date&quot;:&quot;2018-01-31&quot;,&quot;days_past_due_current&quot;:92,&quot;days_past_due_next_month&quot;:120,&quot;core_kolektibilitas_current&quot;:3,&quot;core_kolektibilitas_next_month&quot;:3,&quot;bikolektibilitas_current&quot;:3,&quot;bikolektibilitas_next_month&quot;:3,&quot;segment_psak_id&quot;:2,&quot;segment_psak_desc&quot;:&quot;SEGMENT&quot;,&quot;rating_pool_id&quot;:27,&quot;rating_pool_desc&quot;:&quot;RATING P&quot;,&quot;loan_due_date&quot;:11117,&quot;total_amount_disburse&quot;:9150000,&quot;loan_outstanding&quot;:0,&quot;baki_debit&quot;:0,&quot;carrying_amount&quot;:0,&quot;tenor&quot;:240,&quot;default_flag&quot;:&quot;I&quot;,&quot;created_at&quot;:null,&quot;updated_at&quot;:null}],&quot;filter&quot;:&quot;customer_identifier&quot;,&quot;off&quot;:0,&quot;limit&quot;:1,&quot;page&quot;:8,&quot;total&quot;:8,&quot;current&quot;:1},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;77a8e2b5b2901046d5788fb9e5efb4abd5214fb6198fee3d22a5296d732641db&quot;}}">
+        <div class="card" id="daftar-nasabah">
+            <div class="card-header">
+                <label class="label_filter" for="filter">Filter By : </label>
+                <select id="filter" name="filter" class="filter" wire:model="filter">
+                                            <option value="customer_identifier" >customer identifier</option>
+                                            <option value="account_identifier" >account identifier</option>
+                                            <option value="position_date" >position date</option>
+                                            <option value="days_past_due_current" >days past due current</option>
+                                            <option value="days_past_due_next_month" >days past due next month</option>
+                                            <option value="core_kolektibilitas_current" >core kolektibilitas current</option>
+                                            <option value="core_kolektibilitas_next_month" >core kolektibilitas next month</option>
+                                            <option value="bikolektibilitas_current" >bikolektibilitas current</option>
+                                            <option value="bikolektibilitas_next_month" >bikolektibilitas next month</option>
+                                            <option value="segment_psak_id" >segment psak id</option>
+                                            <option value="segment_psak_desc" >segment psak desc</option>
+                                            <option value="rating_pool_id" >rating pool id</option>
+                                            <option value="rating_pool_desc" >rating pool desc</option>
+                                            <option value="loan_due_date" >loan due date</option>
+                                            <option value="total_amount_disburse" >total amount disburse</option>
+                                            <option value="loan_outstanding" >loan outstanding</option>
+                                            <option value="baki_debit" >baki debit</option>
+                                            <option value="carrying_amount" >carrying amount</option>
+                                            <option value="tenor" >tenor</option>
+                                            <option value="default_flag" >default flag</option>
+                                    </select>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body p-0" id="table-content">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th style="width: 10px">No</th>
+                                            <th>
+                            customer identifier
+                        </th>
+                                            <th>
+                            account identifier
+                        </th>
+                                            <th>
+                            position date
+                        </th>
+                                            <th>
+                            days past due current
+                        </th>
+                                            <th>
+                            days past due next month
+                        </th>
+                                            <th>
+                            core kolektibilitas current
+                        </th>
+                                            <th>
+                            core kolektibilitas next month
+                        </th>
+                                            <th>
+                            bikolektibilitas current
+                        </th>
+                                            <th>
+                            bikolektibilitas next month
+                        </th>
+                                            <th>
+                            segment psak id
+                        </th>
+                                            <th>
+                            segment psak desc
+                        </th>
+                                            <th>
+                            rating pool id
+                        </th>
+                                            <th>
+                            rating pool desc
+                        </th>
+                                            <th>
+                            loan due date
+                        </th>
+                                            <th>
+                            total amount disburse
+                        </th>
+                                            <th>
+                            loan outstanding
+                        </th>
+                                            <th>
+                            baki debit
+                        </th>
+                                            <th>
+                            carrying amount
+                        </th>
+                                            <th>
+                            tenor
+                        </th>
+                                            <th>
+                            default flag
+                        </th>
+                                      </tr>
+                </thead>
+                <tbody>
+                                        <tr>
+                        <td>0</td>
+                                                    <td>
+                                B12345
+                            </td>
+                                                    <td>
+                                201020455310
+                            </td>
+                                                    <td>
+                                2018-01-31
+                            </td>
+                                                    <td>
+                                92
+                            </td>
+                                                    <td>
+                                120
+                            </td>
+                                                    <td>
+                                3
+                            </td>
+                                                    <td>
+                                3
+                            </td>
+                                                    <td>
+                                3
+                            </td>
+                                                    <td>
+                                3
+                            </td>
+                                                    <td>
+                                2
+                            </td>
+                                                    <td>
+                                SEGMENT
+                            </td>
+                                                    <td>
+                                27
+                            </td>
+                                                    <td>
+                                RATING P
+                            </td>
+                                                    <td>
+                                11117
+                            </td>
+                                                    <td>
+                                9150000
+                            </td>
+                                                    <td>
+                                0
+                            </td>
+                                                    <td>
+                                0
+                            </td>
+                                                    <td>
+                                0
+                            </td>
+                                                    <td>
+                                240
+                            </td>
+                                                    <td>
+                                I
+                            </td>
+                                            </tr>
+                                    </tbody>
+              </table>
+
+            </div>
+
+                          <nav>
+                  <ul class="pagination">
+                      
+                                                <li class="disabled">&lsaquo;</span>
+                          </li>
+                      
+                      
+                                                
+                                                        <li class="active" aria-current="page">
+                                  <span>1</span>
+                              </li>
+                          
+                                                
+                                                        <li onclick="Livewire.emit('getPage',2)">2</li>
+                          
+                                                
+                                                        <li onclick="Livewire.emit('getPage',3)">3</li>
+                          
+                                                
+                                                        <li class="disabled" aria-disabled="true">
+                                  <span>.</span>
+                              </li>
+                          
+                                                
+                                                        <li class="disabled" aria-disabled="true">
+                                  <span>.</span>
+                              </li>
+                          
+                                                
+                                                        <li class="disabled" aria-disabled="true">
+                                  <span>.</span>
+                              </li>
+                          
+                                                
+                                                        <li onclick="Livewire.emit('getPage',7)">7</li>
+                          
+                                                
+                                                        <li onclick="Livewire.emit('getPage',8)">8</li>
+                          
+                      
+                      
+                                                <li onclick="Livewire.emit('next')">
+                              &rsaquo;
+                          </li>
+                                        </ul>
+              </nav>
+                  </div>
+</div>
+                </div>
+            </div>
+
+        </div>
+
+        
+        
+        
+        
+    </div>
+
+
+
+    
+                        <!-- Livewire Scripts -->
+
+<script src="livewire/livewire.js?id=83b555bb3e243bc25f35" data-turbo-eval="false" data-turbolinks-eval="false"></script>
+<script data-turbo-eval="false" data-turbolinks-eval="false">
+    if (window.livewire) {
+	    console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')
+	}
+
+    window.livewire = new Livewire();
+    window.livewire.devTools(true);
+    window.Livewire = window.livewire;
+    window.livewire_app_url = '';
+    window.livewire_token = 'qYEHTAvG6XLTEetBIUrVZI2YkOHNrMXu1R6G2L4O';
+
+	/* Make sure Livewire loads first. */
+	if (window.Alpine) {
+	    /* Defer showing the warning so it doesn't get buried under downstream errors. */
+	    document.addEventListener("DOMContentLoaded", function () {
+	        setTimeout(function() {
+	            console.warn("Livewire: It looks like AlpineJS has already been loaded. Make sure Livewire\'s scripts are loaded before Alpine.\\n\\n Reference docs for more info: http://laravel-livewire.com/docs/alpine-js")
+	        })
+	    });
+	}
+
+	/* Make Alpine wait until Livewire is finished rendering to do its thing. */
+    window.deferLoadingAlpine = function (callback) {
+        window.addEventListener('livewire:load', function () {
+            callback();
+        });
+    };
+
+    let started = false;
+
+    window.addEventListener('alpine:initializing', function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+</script>
+            
+    
+            
+</body>
+
+</html>
